@@ -1,13 +1,23 @@
 public class Main {
     public static void main(String[] args) {
-        Pessoa individuo1 = new Pessoa();
+        ContaBanco basico = new ContaBanco("basico");
+        ContaBanco executivo = new ContaBanco("executivo");
+        ContaBanco colaborador = new ContaBanco("colaborador");
 
-        Pessoa dadospessoal = new Pessoa("roberto", 34 , 3578);
+        basico.tranzacao();
+        basico.consulta();
+        basico.pagamento();
+        basico.toString();
 
-        Pessoa caracteristicas = new Pessoa(74.75,1.75);
+        executivo.tranzacao();
+        executivo.consulta();
+        executivo.pagamento();
+        executivo.toString();
 
-
-        System.out.println(dadospessoal.toString());
+        colaborador.tranzacao();
+        colaborador.consulta();
+        colaborador.pagamento();
+        colaborador.toString();
 
     }
 }
